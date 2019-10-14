@@ -10,7 +10,7 @@ import { v4 as uuid } from 'uuid';
 })
 export class NuevoPostsComponent implements OnInit {
 
-  public text:string;
+  public text: string;
 
   constructor(
     private store: Store

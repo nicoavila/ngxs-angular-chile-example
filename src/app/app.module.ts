@@ -8,7 +8,9 @@ import { NuevoPostsComponent } from './nuevo-post/posts.component';
 import { NgxsModule } from '@ngxs/store';
 import { PostsState } from './store/posts/posts.state';
 
-//Dev Tools
+import { environment } from 'src/environments/environment.prod';
+
+// DevTools
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
 import { ListarPostsComponent } from './listar-posts/listar-posts.component';
@@ -25,10 +27,14 @@ import { ListarPostsComponent } from './listar-posts/listar-posts.component';
     NgxsModule.forRoot([
       PostsState
     ],
-      { developmentMode: true }
+      { developmentMode: !environment.production }
     ),
-    NgxsReduxDevtoolsPluginModule.forRoot(),
-    NgxsLoggerPluginModule.forRoot()
+    NgxsReduxDevtoolsPluginModule.forRoot({
+      disabled: environment.production
+    }),
+    NgxsLoggerPluginModule.forRoot({
+      disabled: environment.production
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

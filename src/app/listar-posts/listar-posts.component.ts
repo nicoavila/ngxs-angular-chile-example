@@ -23,6 +23,6 @@ export class ListarPostsComponent implements OnInit {
   }
 
   public removePost(id) {
-    this.store.dispatch(new RemovePost(id))
+    this.store.dispatch(new RemovePost(id));
   }
 }
