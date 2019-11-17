@@ -1,10 +1,6 @@
 import { State, Action, StateContext, Selector } from '@ngxs/store';
-import { Posts } from './posts.model';
+import { PostsStateModel } from './posts.model';
 import { AddPost, RemovePost } from '../../store/posts/posts.actions';
-
-export class PostsStateModel {
-  posts: Posts[];
-}
 
 @State({
   name: 'posts',
