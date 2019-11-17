@@ -8,7 +8,7 @@ import { NuevoPostsComponent } from './nuevo-post/posts.component';
 import { NgxsModule } from '@ngxs/store';
 import { PostsState } from './store/posts/posts.state';
 
-import { environment } from 'src/environments/environment.prod';
+import { environment } from 'src/environments/environment';
 
 // DevTools
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
